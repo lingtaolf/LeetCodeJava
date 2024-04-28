@@ -1,3 +1,5 @@
+package No2_woNumberSum;
+
 /**
  * @Description TODO
  * @Author tao.ling
