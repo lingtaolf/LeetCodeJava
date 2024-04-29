@@ -1,5 +1,7 @@
 package No2_woNumberSum;
 
+import common.ListNode;
+
 /**
  * @Description TODO
  * @Author tao.ling
