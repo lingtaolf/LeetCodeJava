@@ -8,7 +8,7 @@ package No88_mergeMidNum;
 public class Main {
     /**
      * @param nums1 数组1
-     * @param m 数组1长度
+     * @param m     数组1长度
      * @param nums2
      * @param n
      */
@@ -16,24 +16,22 @@ public class Main {
         if (m == 0) {
             for (int i = 0; i < n; ++i)
                 nums1[i] = nums2[i];
-        }
-        else {
-        int currentSize = m;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < (m+n); j++) {
-                System.out.println("processing : " + nums2[i]);
-                if (nums2[i] <= nums1[j]) {
-                    insert2Array(nums1, nums2[i], j);
-                    currentSize++;
-                    break;
-                }
-                else if (j == currentSize - 1){
-                    insert2Array(nums1, nums2[i], j + 1);
-                    currentSize++;
-                    break;
+        } else {
+            int currentSize = m;
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < (m + n); j++) {
+                    System.out.println("processing : " + nums2[i]);
+                    if (nums2[i] <= nums1[j]) {
+                        insert2Array(nums1, nums2[i], j);
+                        currentSize++;
+                        break;
+                    } else if (j == currentSize - 1) {
+                        insert2Array(nums1, nums2[i], j + 1);
+                        currentSize++;
+                        break;
+                    }
                 }
             }
-        }
         }
     }
 
